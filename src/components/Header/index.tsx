@@ -1,11 +1,13 @@
 import React from 'react';
-
+import { Link } from 'react-router-dom';
 import { Container } from './styles';
 
 const Header: React.FC = () => {
   return (
     <Container className="page-header">
-      <h1 className="header-title">Movies</h1>
+      <Link to='/' className="header-title">
+        Movies
+      </Link>
     </Container>
   )
 }

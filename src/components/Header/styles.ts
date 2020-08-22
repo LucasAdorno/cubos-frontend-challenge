@@ -9,8 +9,8 @@ export const Container = styled.header`
   color: #00e8e4;
 
   .header-title{
-    font-weight: 400;
     font-size: 40px;
+    text-decoration: none;
   }
 
 `;
