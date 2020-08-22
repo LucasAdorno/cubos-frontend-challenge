@@ -8,6 +8,7 @@ export default createGlobalStyle`
     outline: 0;
     font-family: 'Abel', sans-serif;
   }
+  
   body {
     -webkit-font-smoothing: antialiased;
   }
