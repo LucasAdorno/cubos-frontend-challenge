@@ -1,8 +1,8 @@
-import React from 'react';
-
+import React, { useEffect, useState } from 'react';
+import { detailsMovie } from '../../services/api';
 // import { Container } from './styles';
 
-interface PropsMovie{
+interface PropsMovie {
   match: {
     params: {
       id: string
@@ -10,8 +10,17 @@ interface PropsMovie{
   }
 }
 
-const MoviePage: React.FC<PropsMovie> = ({match}) => {
-return <h1>hello Movie {match.params.id}</h1>;
+const MoviePage: React.FC<PropsMovie> = ({ match }) => {
+
+  const [title, setTitle] = useState('')
+
+  useEffect(() => {
+    detailsMovie(match.params.id).then((res) => {
+      setTitle(res.data.title);
+    })
+  }, [match.params.id])
+
+return <h1>hello Movie {title}</h1>;
 }
 
 export default MoviePage;
