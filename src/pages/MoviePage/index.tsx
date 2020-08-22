@@ -2,8 +2,16 @@ import React from 'react';
 
 // import { Container } from './styles';
 
-const MoviePage: React.FC = () => {
-  return <h1>hello Movie</h1>;
+interface PropsMovie{
+  match: {
+    params: {
+      id: string
+    }
+  }
+}
+
+const MoviePage: React.FC<PropsMovie> = ({match}) => {
+return <h1>hello Movie {match.params.id}</h1>;
 }
 
 export default MoviePage;
