@@ -8,10 +8,10 @@ import { Container } from './styles';
 interface Dados {
   id: string,
   title: string,
-  description: string,
-  release_date: string,
-  vote_average: string,
+  overview: string,
   poster_path: string,
+  release_date: string,
+  vote_average: number,
   genre_ids: number[]
 }
 

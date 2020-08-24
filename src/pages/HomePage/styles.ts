@@ -31,6 +31,11 @@ export const Container = styled.div`
     color: #7eafce;
   }
 
+  a {
+    width: 100%;
+    text-decoration: none;
+  }
+
   #pagination{
     display: flex;
     align-items: center;
