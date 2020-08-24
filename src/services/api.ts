@@ -26,8 +26,5 @@ export const trailerMovie = (id: string) => {
 };
 
 export const listGenre = () => {
-  api.get(`/genre/movie/list?api_key=${api_key}&language=pt-BR`)
-    .then(response => {
-      return response.data.genres
-    })
+  return api.get(`/genre/movie/list?api_key=${api_key}&language=pt-BR`)
 };
