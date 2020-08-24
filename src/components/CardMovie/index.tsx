@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import GenreList from '../GenreList';
+import ajustDate from '../../utils/ajustDate';
 import { listGenre, posterMovie } from '../../services/api';
 
 import { Container } from './styles';
@@ -8,10 +10,10 @@ interface CardProps {
   dados: {
     id: string,
     title: string,
-    description: string,
-    release_date: string,
-    vote_average: string,
+    overview: string,
     poster_path: string,
+    release_date: string,
+    vote_average: number,
     genre_ids: number[]
   }
 }
@@ -23,11 +25,13 @@ interface GenresComplete {
 
 const CardMovie: React.FC<CardProps> = ({ dados }) => {
 
-  const [genres, setGenres] = useState<string[]>([])
+  const [genres, setGenres] = useState<string[]>([]);
+  const [date, setDate] = useState<string>();
 
   useEffect(() => {
     getGenres(dados.genre_ids);
-  }, [dados.genre_ids])
+    setDate(ajustDate(dados.release_date));
+  }, [dados.genre_ids, dados.release_date])
 
   const getGenres = (genresIds: number[]) => {
     listGenre().then(response => {
@@ -46,8 +50,20 @@ const CardMovie: React.FC<CardProps> = ({ dados }) => {
   return (
     <Link to={`/movie/${dados.id}`}>
       <Container>
-        {genres.map(i=> <p>{i}</p>)}
-        <img src={posterMovie(dados.poster_path)} alt=""/>
+        <img src={posterMovie(dados.poster_path)} alt="poster do filme" />
+        <div className='card-content'>
+          <h1 className="card-title">{dados.title}</h1>
+          <div className='card-infos'>
+            <div className='card-percent-border'>
+              <p className='card-percent'>{dados.vote_average * 10}%</p>
+            </div>
+            <p className='card-date'>{date}</p>
+            <p className='card-description'>{dados.overview}</p>
+            <div className='card-genre-list'>
+              <GenreList genres={genres} />
+            </div>
+          </div>
+        </div>
       </Container>
     </Link>
   );
