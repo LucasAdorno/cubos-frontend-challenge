@@ -37,7 +37,6 @@ const HomePage: React.FC = () => {
           setLoading('');
           setPageMarker(pageConsult);
           setPageCount(countPageArray(data.length));
-          console.log(data.length)
           setValidResponse(true);
         })
         .catch(err => {
@@ -64,14 +63,15 @@ const HomePage: React.FC = () => {
         {validResponse ? dados && dados.map((dado) =>
           <CardMovie key={dado.id} dados={dado} />
         )
-          : <h1>{loading}</h1>
-        }
+          : <h1>{loading}</h1>}
+
       </div>
       <div id='pagination'>
+
         {validResponse ? pageCount.map((count) =>
-          <div className={`border-marker ${(pageCount.indexOf(count) + 1) === pageMarker ? 'active' : ''}`}>
+          <div key={count}
+            className={`border-marker ${(pageCount.indexOf(count) + 1) === pageMarker ? 'active' : ''}`}>
             <input
-              key={count}
               type='button'
               className='page-marker'
               value={count}
@@ -79,8 +79,8 @@ const HomePage: React.FC = () => {
               title={`${count}`} />
           </div>
         )
-          : <></>
-        }
+          : <></>}
+
       </div>
     </Container>
   );
