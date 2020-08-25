@@ -5,6 +5,7 @@ export const Container = styled.div`
   flex-direction: column;
   align-items: center;
   width: 88%;
+  max-width: 1200px;
   margin: 0 auto;
   
   #homepage-content {
