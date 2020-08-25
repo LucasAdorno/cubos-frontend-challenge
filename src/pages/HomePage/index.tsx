@@ -52,7 +52,7 @@ const HomePage: React.FC = () => {
 
   return (
     <Container>
-      <div id='homepage-content'>
+      <section id='homepage-content'>
         <input id='search-input'
           type='text'
           ref={inputRef}
@@ -65,7 +65,7 @@ const HomePage: React.FC = () => {
         )
           : <h1>{loading}</h1>}
 
-      </div>
+      </section>
       <div id='pagination'>
 
         {validResponse ? pageCount.map((count) =>
