@@ -2,7 +2,7 @@
 
 #### Desafio da Cubos para a vaga de estágiario em desenvolvimento frontend. <br/> Consiste em um Web App responsivo para buscar e consultar informações de filmes fornecidos da API do The Movie DB.
 
-### Built with:
+### Construido com:
 - Axios
 - ReactJs
 - React-router-dom
@@ -10,11 +10,11 @@
 - TypeScript
 - A lot of coffee :)
 
-### Instructions
-- Open your terminal.
-- Insert `git clone https://github.com/LucasAdorno/cubos-frontend-challenge.git`
-- Insert `cd cubos-frontend-challenge`
-- if you don't have nodeJS on your device, install https://nodejs.org/en/download/
-- Insert the `npm i` to install all dependencies.
-- Insert `npm run start` to run.
-- The project run in http://localhost:3000
+### Instruções:
+- Abra seu terminal.
+- Insira no terminal o seguinte comando: `git clone https://github.com/LucasAdorno/cubos-frontend-challenge.git`
+- Insita no terminal o seguinte comando: `cd cubos-frontend-challenge`
+- Se você não tiver o NodeJS instalado no seu dispositivo, instale em:  https://nodejs.org/en/download/
+- Insira no seu terminal `npm i` para instalar as dependências necessárias.
+- Insira no seu terminal `npm run start` para executar o projeto.
+- O projeto abrirá automaticamente, caso não abra acesse o seu navegador e insira a url: http://localhost:3000
