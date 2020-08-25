@@ -1,7 +1,6 @@
 ## Movies by Cubos
 
-#### Desafio da Cubos para a vaga de estágiario em desenvolvimento frontend. 
-#### Consiste em um web-app responsivo para buscar e consultar informações de filmes oriundos da api disponibilizada do The Movie DB.
+#### Desafio da Cubos para a vaga de estágiario em desenvolvimento frontend. <br/> Consiste em um Web App responsivo para buscar e consultar informações de filmes fornecidos da API do The Movie DB.
 
 ### Built with:
 - Axios
