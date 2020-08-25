@@ -113,13 +113,14 @@ const MoviePage: React.FC<PropsMovie> = ({ match }) => {
           </div>
         </div>
       </div>
-      <iframe title='youtube-trailer' width="100%"
+      {trailerUrl ? <iframe title='youtube-trailer' width="100%"
         height="560px"
         src={`https://www.youtube.com/embed/${trailerUrl}`}
         frameBorder="0" allow="accelerometer; autoplay;
         encrypted-media; gyroscope; picture-in-picture"
         allowFullScreen>
-      </iframe>
+      </iframe> 
+      : <></>}
     </Container>
   );
 }
