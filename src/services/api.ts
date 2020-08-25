@@ -19,10 +19,7 @@ export const detailsMovie = (id: string) => {
 };
 
 export const trailerMovie = (id: string) => {
-  api.get(`/movie/${id}/videos?api_key=${api_key}&language=pt-BR`)
-    .then(response => {
-      return `https://www.youtube.com/embed/${response.data.results[0].key}`
-    })
+  return api.get(`/movie/${id}/videos?api_key=${api_key}&language=pt-BR`)
 };
 
 export const listGenre = () => {
