@@ -34,6 +34,7 @@ export const Container = styled.main`
   }
 
   #details-content {
+    width: 100%;
     background: #f2f2f2;
   }
 
