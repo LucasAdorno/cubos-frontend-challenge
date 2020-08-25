@@ -68,6 +68,8 @@ export const Container = styled.div`
 
   .card-infos .card-genre-list {
     display: flex;
+    flex-wrap: wrap;
+    margin: 10px 0 30px 0;
   }
 
   @media(min-width: 720px) {
